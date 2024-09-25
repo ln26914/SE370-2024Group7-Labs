@@ -79,6 +79,7 @@ public class Lab4 extends JPanel {
         // set the dimensions for the frame, adjusting for card grid and size
         frame.setPreferredSize(new Dimension(1300, 600));  // You can adjust the size as needed
 
+        // Create the shuffling button
         JButton shuffleButton = new JButton("Shuffle Deck")
         shuffleButton.addActionListener(new shuffleButtonListener())
 
