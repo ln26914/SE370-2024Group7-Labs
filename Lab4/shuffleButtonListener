@@ -1,0 +1,12 @@
+public class shuffleButtonListener implements ActionListener {
+        // Class Variables
+
+        public shuffleButtonListener() {
+            // Assign class variables to their intended values
+        }
+
+        public void actionPerformed(ActionEvent e) {
+            // Peform the shuffling method on the deck.
+        }
+    }
+}

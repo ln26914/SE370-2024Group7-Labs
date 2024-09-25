@@ -59,18 +59,6 @@ public class Lab4 extends JPanel {
         }
     }
 
-    public class shuffleButtonListener implements ActionListener {
-        // Class Variables
-
-        public shuffleButtonListener() {
-            // Assign class variables to their intended values
-        }
-
-        public void actionPerformed(ActionEvent e) {
-            // Peform the shuffling method on the deck.
-        }
-    }
-
     public static void main(String[] args) {
         JFrame frame = new JFrame("Card Deck Visualization");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
