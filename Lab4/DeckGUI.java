@@ -10,7 +10,7 @@ import javax.swing.*;
 import javax.imageio.ImageIO;
 import java.io.File;
 
-public class Lab4 extends JPanel {
+public class DeckGUI extends JPanel {
     // Arrays for card ranks and suits with the same lettering as the cards in the file we found
     private static final String[] RANKS = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
     private static final String[] SUITS = {"S", "H", "D", "C"};  // S: Spades, H: Hearts, D: Diamonds, C: Clubs
@@ -20,7 +20,7 @@ public class Lab4 extends JPanel {
     private static final int CARD_HEIGHT = 120;
 
     
-    public Lab4() {
+    public DeckGUI() {
         // Set layout for the panel: 4 rows and 13 columns for 52 cards
         setLayout(new GridLayout(4, 13));  // 4 rows (suits) and 13 columns (ranks)
         
@@ -32,7 +32,7 @@ public class Lab4 extends JPanel {
                 
                 try {
                     // Load the image file using ImageIO
-                    File imgFile = new File("./Lab4/CardImages/" + imageName);
+                    File imgFile = new File("./DeckGUI/CardImages/" + imageName);
                     Image image = ImageIO.read(imgFile);
                     
                     if (image != null) {
@@ -64,7 +64,7 @@ public class Lab4 extends JPanel {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setBackground(Color.green); //changes the background color
         // Create an instance for the function that grabs the cards and sets the jFrame
-        Lab4 cardPanel = new Lab4();
+        DeckGUI cardPanel = new DeckGUI();
         frame.add(cardPanel);
 
         // set the dimensions for the frame, adjusting for card grid and size
