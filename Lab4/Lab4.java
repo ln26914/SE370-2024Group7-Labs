@@ -62,7 +62,7 @@ public class Lab4 extends JPanel {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Card Deck Visualization");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setBackground(Color.green);
+        frame.setBackground(Color.green); //changes the background color
         // Create an instance for the function that grabs the cards and sets the jFrame
         Lab4 cardPanel = new Lab4();
         frame.add(cardPanel);
