@@ -3,8 +3,10 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import java.awt.GridLayout;
+import java.awt.Color;
 import java.awt.Image;
 import java.awt.Dimension;
+import javax.swing.*;
 import javax.imageio.ImageIO;
 import java.io.File;
 
@@ -16,6 +18,7 @@ public class Lab4 extends JPanel {
     // I set specific dimensions for the cards (in pixels)
     private static final int CARD_WIDTH = 80;  
     private static final int CARD_HEIGHT = 120;
+
     
     public Lab4() {
         // Set layout for the panel: 4 rows and 13 columns for 52 cards
@@ -59,14 +62,13 @@ public class Lab4 extends JPanel {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Card Deck Visualization");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
+        frame.setBackground(Color.green);
         // Create an instance for the function that grabs the cards and sets the jFrame
         Lab4 cardPanel = new Lab4();
         frame.add(cardPanel);
-        
+
         // set the dimensions for the frame, adjusting for card grid and size
         frame.setPreferredSize(new Dimension(1300, 600));  // You can adjust the size as needed
-        
         // used pack to fix spacing
         frame.pack();
         frame.setVisible(true);
