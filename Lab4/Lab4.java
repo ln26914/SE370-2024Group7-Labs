@@ -56,6 +56,18 @@ public class Lab4 extends JPanel {
         }
     }
 
+    public class shuffleButtonListener implements ActionListener {
+        // Class Variables
+
+        public shuffleButtonListener() {
+            // Assign class variables to their intended values
+        }
+
+        public void actionPerformed(ActionEvent e) {
+            // Peform the shuffling method on the deck.
+        }
+    }
+
     public static void main(String[] args) {
         JFrame frame = new JFrame("Card Deck Visualization");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -66,7 +78,10 @@ public class Lab4 extends JPanel {
         
         // set the dimensions for the frame, adjusting for card grid and size
         frame.setPreferredSize(new Dimension(1300, 600));  // You can adjust the size as needed
-        
+
+        JButton shuffleButton = new JButton("Shuffle Deck")
+        shuffleButton.addActionListener(new shuffleButtonListener())
+
         // used pack to fix spacing
         frame.pack();
         frame.setVisible(true);
