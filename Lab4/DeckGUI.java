@@ -11,13 +11,13 @@ import javax.imageio.ImageIO;
 import java.io.File;
 
 public class DeckGUI extends JPanel {
-    // Arrays for card ranks and suits with the same lettering as the cards in the file we found
-    private static final String[] RANKS = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"};
-    private static final String[] SUITS = {"0", "1", "2", "3"};  // S: Spades, H: Hearts, D: Diamonds, C: Clubs NEW 0 = Clubs, 1 = Hearts, 2 = Spades, 3 = Diamonds
-    
     // I set specific dimensions for the cards (in pixels)
     private static final int CARD_WIDTH = 80;  
     private static final int CARD_HEIGHT = 120;
+
+    // The deck of cards in question:
+    private Deck deck = new Deck(); // If you say "deck" enough times it stops seeming like a word.
+    // hahaha "deck deck deck deck deck"
 
     public void display() {
         // Display Function here
@@ -60,17 +60,7 @@ public class DeckGUI extends JPanel {
     public DeckGUI() {
         // Set layout for the panel: 4 rows and 13 columns for 52 cards
         setLayout(new GridLayout(4, 13));  // 4 rows (suits) and 13 columns (ranks)
-        private Deck deck;
-        
-
-        // Loop through each suit and rank combination to maintain order before the reshuffle
-        for (String suit : SUITS) {
-            for (String rank : RANKS) {
-                // Construct the image file name
-                String imageName = Sting(i) + ".jpg";  // e.g., 2C.jpg, QS.jpg, AH.jpg
-                
-            }
-        }
+        this.display();
     }
 
     public static void main(String[] args) {
@@ -85,8 +75,9 @@ public class DeckGUI extends JPanel {
         frame.setPreferredSize(new Dimension(1300, 600));  // You can adjust the size as needed
 
         // Create the shuffling button
-        JButton shuffleButton = new JButton("Shuffle Deck")
-        shuffleButton.addActionListener(new shuffleButtonListener())
+        JButton shuffleButton = new JButton("Shuffle Deck");
+        shuffleButton.addActionListener(new shuffleButtonListener(this, this.deck));
+        frame.add(shuffleButton);
 
         // used pack to fix spacing
         frame.pack();
