@@ -64,4 +64,35 @@ public class Card {
     public void setImg(String newImg) {
         this.img = newImg;
     }
+
+    /**
+     * getSuit()
+     * Usage: Returns this card's suit
+     * 0 = Clubs, 1 = Hearts, 2 = Spades, 3 = Diamonds
+     * Input: None
+     * Output: This card's suit (0 - 3)
+     */
+    public int getSuit() {
+        return this.suit;
+    }
+
+    /**
+     * getRank()
+     * Usage: Returns this card's rank
+     * Input: None
+     * Output: This card's rank (0 - 12)
+     */
+    public int getRank() {
+        return this.suit;
+    }
+
+    /**
+     * getSuit()
+     * Usage: Returns this card's image filepath
+     * Input: None
+     * Output: This card's desired image filepath
+     */
+    public int getImg() {
+        return this.img;
+    }
 }
